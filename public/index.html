@@ -1,415 +1,305 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asztalos Robi - Egyedi bútor</title>
-    
-    <!-- OpenGraph Meta Tags for Social Media -->
-    <meta property="og:title" content="Asztalos Robi - Egyedi bútor">
-    <meta property="og:description" content="Óriási színválaszték és megbízható asztalos szolgáltatások, ingyenes helyszíni felmérés (30km). Reliable custom furniture, fast delivery, color catalog, and site survey.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.asztalosrobi.com/">
-    <meta property="og:image" content="https://www.asztalosrobi.com/images/Messenger_creation_5C430B5B-7E14-48D5-9343-BCE1B3F96C29.jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="hu_HU">
-    <meta property="og:site_name" content="Asztalos Robi">
-    
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" href="icons/g1.png" type="image/x-icon">
-    <meta name="description" content="Óriási színválaszték és megbízható asztalos szolgáltatások, ingyenes helyszíni felmérés (30km). Reliable custom furniture, fast delivery, color catalog, and site survey.">
-    <meta name="keywords" content="asztalos, egyedi bútor, színkatalógus, megbízható asztalos, custom furniture, woodworking, free site survey, interior design, bútor felmérés, 18. kerület, Szajkó Róbert, furniture renovation, kitchen design, carpentry, modern furniture, handcrafted furniture">
-    <link rel="canonical" href="https://www.asztalosrobi.com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asztalos Robi — Egyedi bútorkészítés | Szajkó Róbert</title>
+<meta name="description" content="Szajkó Róbert asztalosmester — egyedi bútor, beépített gardrób, komplett konyha. 30 év tapasztalat, ingyenes helyszíni felmérés 30 km-en belül, helyszíni színkatalógus.">
+<link rel="icon" href="assets/icons/logo-g1.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-hidden">
-            <div class="logo">
-                <a href="#"><img src="icons/g1.png" alt="Logo"></a>
-            </div>
-            <div class="nav-items">
-                <a href="#gallery-section">Galéria</a>
-                <a href="#rolam-section">Rólam</a>
-                <a href="#contact-section"><img src="icons/call.png" alt="Contact Icon"></a>
-            </div>
-        </nav>
-    </header>
-    
-    <main>
-        <!-- Mobile View -->
-        <section class="hero-section mobile-view">
-            <div class="image-container">
-                <!-- Large Image -->
-                <div class="large-image">
-                    <img src="images/Messenger_creation_5C430B5B-7E14-48D5-9343-BCE1B3F96C29.jpeg" alt="Large Hero Image">
-                </div>
-                <!-- Small Images -->
-                <div class="small-image-container">
-                    <img src="images/IMG_20241202_160114.jpg" alt="Small Image 1" class="small-image">
-                    <img src="images/IMG_20241202_162622.jpg" alt="Small Image 2" class="small-image">
-                    <img src="images/IMG_20241209_171713.jpg" alt="Small Image 3" class="small-image">
-                </div>
-            </div>
-            <div class="hero-text hero-text-hidden">
-                <h1>Egyedi bútor<br>készítés</h1>
-                <p>Modern, a megrendelő igényeinek megfelelő, minőségi bútorok, elérhető áron, helyszíni színkatalógus segítségével.</p>
-            </div>
-            <a href="#contact-section"><button class="cta-button">Lépjünk kapcsolatba <span class="arrow">→</span></button></a>
-        </section>
 
+<!-- ============================ NAV ============================ -->
+<header class="nav" data-screen-label="Navigáció">
+  <a class="nav__brand" href="#top" aria-label="Asztalos Robi — kezdőlap">
+    <span class="nav__mark">R</span>
+    <span>Asztalos Robi<small>Szajkó Róbert</small></span>
+  </a>
+  <nav class="nav__links" aria-label="Fő navigáció">
+    <a class="lnk" href="#munkak">Munkák</a>
+    <a class="lnk" href="#galeria">Galéria</a>
+    <a class="lnk" href="#rolam">Rólam</a>
+    <a class="lnk" href="#kapcsolat">Kapcsolat</a>
+  </nav>
+  <a class="nav__phone" href="tel:+36209844113"><span class="dot" aria-hidden="true"></span>+36 20 984 4113</a>
+  <button class="nav__burger" aria-label="Menü" aria-expanded="false"><span></span><span></span></button>
+</header>
 
-        <!-- Desktop View -->
-        <section class="hero-section desktop-view">
-            <!-- Left Section -->
-            <div class="hero-content">
-                <h1>Egyedi bútorok<br>készítése</h1>
-                <div class="hero-buttons">
-                    <a href="#contact-section"><button class="hero-button primary">Lépjünk kapcsolatba</button></a>
-                    <a href="#gallery-section"><button class="hero-button outline">Galéria</button></a>
-                </div>
-                <p class="hero-description">
-                    Modern, a megrendelő igényeinek megfelelő, minőségi bútorok, elérhető áron, helyszíni színkatalógus segítségével.
-                </p>
-                <div class="small-images">
-                    <img src="images/IMG_20241202_160114.jpg" alt="Small Image 1">
-                    <img src="images/IMG_20241202_162622.jpg" alt="Small Image 2">
-                    <img src="images/IMG_20241209_171713.jpg" alt="Small Image 3">
-                </div>
-            </div>
-        
-            <!-- Right Section -->
-            <div class="hero-image">
-                <img src="images/Messenger_creation_5C430B5B-7E14-48D5-9343-BCE1B3F96C29.jpeg" alt="Large Hero Image">
-            </div>
-            <!-- Bouncing Arrow -->
-            <div class="bouncing-arrow">
-                <a href="#rolam-section" style="text-decoration: none; color: black;">
-                <span>|</span><br>
-                <span>|</span><br>
-                <span>V</span>
-                </a>
-            </div>
-        </section>
-        
+<!-- Mobile drawer -->
+<nav class="drawer" aria-label="Mobil menü">
+  <a href="#munkak" style="--i:0">Munkák</a>
+  <a href="#galeria" style="--i:1">Galéria</a>
+  <a href="#rolam" style="--i:2">Rólam</a>
+  <a href="#kapcsolat" style="--i:3">Kapcsolat</a>
+  <div class="drawer__meta">Hívjon bizalommal<br><strong>+36 20 984 4113</strong></div>
+</nav>
 
-        <section class="statistics-section mobile-view">
-            <div class="statistics-background">
-                <div class="statistics-image">
-                    <img src="images/Messenger_creation_29A39DDC-C576-479D-A2E8-1D5003EE3F57.jpeg" alt="Statistics Image">
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number-wrapper">
-                        <span class="stat-number" data-target="30">0</span><span class="stat-plus">+</span>
-                    </div>
-                    <span class="stat-text">Év tapasztalat</span>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number-wrapper">
-                        <span class="stat-number" data-target="700">0</span><span class="stat-plus">+</span>
-                    </div>
-                    <span class="stat-text">Elégedett ügyfél</span>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number-wrapper">
-                        <span class="stat-number" data-target="1000">0</span><span class="stat-plus">+</span>
-                    </div>
-                    <span class="stat-text">Sikeres projekt</span>
-                </div>
-            </div>
-            <div class="statistics-text float-fade-in-left">
-                Az elmúlt évek tapasztalatai alapján az ügyfeleim <b>elégedettek</b> igényeiket elvárásaik alapján kiviteleztem. 
-                <b>Igényes munkát elérhető áron.</b> A megbeszélt időpontot betartva.
-            </div>
-            <div class="statistics-button-container">
-                <a href="#contact-section"><button class="statistics-button statistics-button-primary">Lépjünk kapcsolatba</button></a>
-                <a href="#gallery-section"><button class="statistics-button statistics-button-outline">Galéria</button></a>
-            </div>        
-        </section>        
+<main id="top">
 
-        <section class="statistics-section desktop-view">
-            <!-- Background for the section -->
-            <div class="statistics-background"></div>
-        
-            <div class="statistics-container">
-                <!-- Left Image Section -->
-                <div class="statistics-image">
-                    <img src="images/Messenger_creation_29A39DDC-C576-479D-A2E8-1D5003EE3F57.jpeg" alt="Statistics Section Image">
-                </div>
-        
-                <!-- Right Content Section -->
-                <div class="statistics-content">
-                    <!-- Text -->
-                    <div class="statistics-text">
-                        Az elmúlt évek tapasztalatai alapján az ügyfeleim <b>elégedettek</b> igényeiket elvárásaik alapján kiviteleztem.
-                        <b>Igényes munkát elérhető áron.</b> A megbeszélt időpontot betartva.
-                    </div>
-        
-                    <!-- Statistics Items -->
-                    <div class="statistics-items">
-                        <div class="stat-item">
-                            <div class="stat-number-wrapper">
-                                <span class="stat-number" data-target="30">0</span><span class="stat-plus">+</span>
-                            </div>
-                            <span class="stat-text">Év tapasztalat</span>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number-wrapper">
-                                <span class="stat-number" data-target="700">0</span><span class="stat-plus">+</span>
-                            </div>
-                            <span class="stat-text">Elégedett ügyfél</span>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number-wrapper">
-                                <span class="stat-number" data-target="1000">0</span><span class="stat-plus">+</span>
-                            </div>
-                            <span class="stat-text">Sikeres projekt</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
+<!-- ============================ HERO ============================ -->
+<section class="hero" data-screen-label="Főoldal — Hero">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <h1 class="display">
+        <span class="l"><span>Egyedi bútor,</span></span>
+        <span class="l"><span><em>méretre szabva.</em></span></span>
+      </h1>
+      <p class="hero__lead">Modern, az igényeire szabott, minőségi bútorok — elérhető áron, helyszíni színkatalógus segítségével. A tervezéstől a beépítésig egy kézben.</p>
+      <div class="hero__cta">
+        <a class="btn btn--accent btn--lg" href="#kapcsolat">Ingyenes felmérést kérek <span class="ar" aria-hidden="true">↗</span></a>
+        <a class="btn btn--ghost btn--lg" href="#galeria">Galéria</a>
+      </div>
+      <div class="hero__chips">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>30+ év tapasztalat</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Ingyenes felmérés 30 km-en belül</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/><path d="M12 2a10 10 0 0 0 0 20 1.5 1.5 0 0 0 1.06-2.56 1.5 1.5 0 0 1 1.06-2.56h1.84A4 4 0 0 0 22 13a10 10 0 0 0-10-11Z"/></svg>Helyszíni színkatalógus</span>
+      </div>
+    </div>
 
-        <!-- Munkak Section Mobile View -->
-        <section class="munkak-section mobile-view">
-            <div class="munkak-cards-container">
-                <!-- Card 1 -->
-                <div class="munkak-card">
-                    <div class="munkak-card-image">
-                        <img src="images/3adec396-d7cd-47d4-8554-6b6d9b6f9820.jpeg" alt="Egyedi bútor">
-                    </div>
-                    <div class="munkak-card-text float-fade-in-left">
-                        <h3>Egyedi bútor</h3>
-                        <p>Modern bútorok, egyedi igények alapján</p>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="munkak-card">
-                    <div class="munkak-card-image">
-                        <img src="images/received_497239141319540.jpeg" alt="Beépített gardrób">
-                    </div>
-                    <div class="munkak-card-text float-fade-in-left">
-                        <h3>Beépített gardrób</h3>
-                        <p>Tökéletes tárolási megoldások</p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="munkak-card">
-                    <div class="munkak-card-image">
-                        <img src="images/butor_feljavitas.jpg" alt="Bútorok feljavítása">
-                    </div>
-                    <div class="munkak-card-text float-fade-in-left">
-                        <h3>Bútorok feljavítása</h3>
-                        <p>Régi bútorok újjá varázsolása</p>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="munkak-card">
-                    <div class="munkak-card-image">
-                        <img src="images/20210207_122307.jpg" alt="Ajtók beállítása">
-                    </div>
-                    <div class="munkak-card-text float-fade-in-left">
-                        <h3>Ajtók beállítása</h3>
-                        <p>Pontos ajtóbeállítás a tökéletes működéshez</p>
-                    </div>
-                </div>
-                <!-- Card 5 -->
-                <div class="munkak-card">
-                    <div class="munkak-card-image">
-                        <img src="images/b2507d86-6cb1-475b-99fe-fa99a5411f6b.jpeg" alt="Komplett konyha">
-                    </div>
-                    <div class="munkak-card-text float-fade-in-left">
-                        <h3>Komplett konyha</h3>
-                        <p>Teljes körű konyhai megoldások</p>
-                    </div>
-                </div>
-                <!-- Card 6 -->
-                <div class="munkak-card">
-                    <div class="munkak-card-image">
-                        <img src="images/199c7947-1d61-4535-8172-e3b43ad5b7ff.jpeg" alt="Konyha, nappali, fürdő berendezése">
-                    </div>
-                    <div class="munkak-card-text float-fade-in-left">
-                        <h3>Konyha, nappali, fürdő berendezése</h3>
-                        <p>Komplex otthoni berendezési megoldások</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="hero__media">
+      <div class="hero__stamp" aria-hidden="true">
+        <svg class="ring" viewBox="0 0 120 120">
+          <defs><path id="circ" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+          <text><textPath href="#circ" startOffset="0">EGYEDI BÚTOR · KÉZZEL KÉSZÜLT · 1994 ÓTA · </textPath></text>
+        </svg>
+        <span class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 6-8.5 8.5-3.5-3.5"/><path d="M3 3v18h18"/></svg></span>
+      </div>
+      <div class="hero__frame">
+        <img src="assets/images/hero-main.jpeg" alt="Egyedi, kétszínű konyhabútor réz fogantyúkkal">
+      </div>
+      <div class="hero__badge">
+        <div class="big">700<sup>+</sup></div>
+        <div class="lbl">elégedett ügyfél az évek alatt</div>
+      </div>
+    </div>
+  </div>
 
-        <!-- Munkak Section Desktop View -->
-        <section class="munkak-section desktop-view">
-            <div class="munkak-cards-container">
-                <!-- Card 1 -->
-                <div class="munkak-card">
-                    <div class="munkak-card-image">
-                        <img src="images/3adec396-d7cd-47d4-8554-6b6d9b6f9820.jpeg" alt="Egyedi bútor">
-                    </div>
-                    <div class="munkak-card-text float-fade-in-left">
-                        <h3>Egyedi bútor</h3>
-                        <p>Modern bútorok, egyedi igények alapján</p>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="munkak-card">
-                    <div class="munkak-card-image">
-                        <img src="images/received_497239141319540.jpeg" alt="Beépített gardrób">
-                    </div>
-                    <div class="munkak-card-text float-fade-in-left">
-                        <h3>Beépített gardrób</h3>
-                        <p>Tökéletes tárolási megoldások</p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="munkak-card">
-                    <div class="munkak-card-image">
-                        <img src="images/butor_feljavitas.jpg" alt="Bútorok feljavítása">
-                    </div>
-                    <div class="munkak-card-text float-fade-in-left">
-                        <h3>Bútorok feljavítása</h3>
-                        <p>Régi bútorok újjá varázsolása</p>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="munkak-card">
-                    <div class="munkak-card-image">
-                        <img src="images/20210207_122307.jpg" alt="Ajtók beállítása">
-                    </div>
-                    <div class="munkak-card-text float-fade-in-left">
-                        <h3>Ajtók beállítása</h3>
-                        <p>Pontos ajtóbeállítás a tökéletes működéshez</p>
-                    </div>
-                </div>
-                <!-- Card 5 -->
-                <div class="munkak-card">
-                    <div class="munkak-card-image">
-                        <img src="images/b2507d86-6cb1-475b-99fe-fa99a5411f6b.jpeg" alt="Komplett konyha">
-                    </div>
-                    <div class="munkak-card-text float-fade-in-left">
-                        <h3>Komplett konyha</h3>
-                        <p>Teljes körű konyhai megoldások</p>
-                    </div>
-                </div>
-                <!-- Card 6 -->
-                <div class="munkak-card">
-                    <div class="munkak-card-image">
-                        <img src="images/199c7947-1d61-4535-8172-e3b43ad5b7ff.jpeg" alt="Konyha, nappali, fürdő berendezése">
-                    </div>
-                    <div class="munkak-card-text float-fade-in-left">
-                        <h3>Konyha, nappali, fürdő berendezése</h3>
-                        <p>Komplex otthoni berendezési megoldások</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Egyedi bútor</span><span>Beépített gardrób</span><span>Komplett konyha</span><span>Bútorfelújítás</span><span>Belsőépítészet</span>
+      <span>Egyedi bútor</span><span>Beépített gardrób</span><span>Komplett konyha</span><span>Bútorfelújítás</span><span>Belsőépítészet</span>
+    </div>
+  </div>
+</section>
 
-        <section class="rolam-section" id="rolam-section">
-            <div class="rolam-background">
-                <div class="rolam-image">
-                    <img src="images/IMG_20241210_124102.jpg" alt="Szajkó Róbert">
-                </div>
-                <div class="rolam-text">
-                    <h3>Szajkó Róbert</h3>
-                    <p>
-                        30 éves szakmai tapasztalattal rendelkezem. A korral lépést tartva technikailag- és esztétikailag folyamatosan megújulva dolgozom, mert szeretem és élvezem a munkámat. Boldogsággal tölt el a megrendelő elégedettsége, ezért maximális minőségre és pontosságra törekszem a tökéletes eredmény elérése érdekében.
-                    </p>
-                </div>
-            </div>
-        </section>
-        
-        
+<!-- ============================ STATS ============================ -->
+<section class="stats on-dark" data-screen-label="Számokban">
+  <svg class="stats__rings" viewBox="0 0 560 560" aria-hidden="true">
+    <circle cx="280" cy="280" r="120"/><circle cx="280" cy="280" r="180"/><circle cx="280" cy="280" r="240"/><circle cx="280" cy="280" r="278"/>
+  </svg>
+  <div class="wrap">
+    <div class="stats__intro">
+      <div class="reveal">
+        <span class="eyebrow">Bizalom számokban</span>
+        <h2>Harminc év szakmai<br>tapasztalat a hátam mögött.</h2>
+      </div>
+      <p class="reveal" data-d="1">Az elmúlt évek alatt ügyfeleim igényeit az elvárásaik szerint valósítottam meg. <strong>Igényes munka elérhető áron</strong> — a megbeszélt időpontot betartva.</p>
+    </div>
+    <div class="stats__grid">
+      <div class="stat reveal"><div class="num"><span data-target="30">0</span><span class="plus">+</span></div><div class="lbl">Év tapasztalat</div></div>
+      <div class="stat reveal" data-d="1"><div class="num"><span data-target="700">0</span><span class="plus">+</span></div><div class="lbl">Elégedett ügyfél</div></div>
+      <div class="stat reveal" data-d="2"><div class="num"><span data-target="1000">0</span><span class="plus">+</span></div><div class="lbl">Sikeres projekt</div></div>
+    </div>
+  </div>
+</section>
 
-        <section class="gallery-section" id="gallery-section">
-            <div class="gallery-container">
-                <!-- Columns will be dynamically added here -->
-            </div>
-        </section>
-        <div id="lightbox" class="lightbox">
-            <div class="lightbox-content">
-                <button class="lightbox-close">&times;</button>
-                <button class="lightbox-prev">&lt;</button>
-                <img src="" alt="Lightbox Image" class="lightbox-image">
-                <button class="lightbox-next">&gt;</button>
-            </div>
+<!-- ============================ SERVICES ============================ -->
+<section class="services" id="munkak" data-screen-label="Munkák">
+  <div class="wrap">
+    <div class="services__head">
+      <div class="section-head reveal">
+        <span class="eyebrow">Amit vállalok</span>
+        <h2 class="display">Konyhától a gardróbig — <em>minden méretre.</em></h2>
+      </div>
+      <a class="btn btn--ghost reveal" data-d="1" href="#kapcsolat">Egyeztetek egy projektet</a>
+    </div>
+
+    <div class="svc-grid">
+      <article class="svc svc--lg reveal">
+        <div class="svc__img"><img src="assets/images/work-konyha.jpeg" alt="Komplett konyhabútor"></div>
+        <div class="svc__body"><div class="svc__num">01</div><h3>Komplett konyha</h3><p>Teljes körű konyhai megoldások a méréstől a beépítésig, gépesítéssel együtt.</p></div>
+      </article>
+      <article class="svc svc--md reveal" data-d="1">
+        <div class="svc__img"><img src="assets/images/work-egyedi-butor.jpeg" alt="Egyedi bútor"></div>
+        <div class="svc__body"><div class="svc__num">02</div><h3>Egyedi bútor</h3><p>Modern bútorok, kizárólag az Ön igényei és tere alapján megtervezve.</p></div>
+      </article>
+      <article class="svc svc--sm reveal">
+        <div class="svc__img"><img src="assets/images/work-gardrob.jpeg" alt="Beépített gardrób"></div>
+        <div class="svc__body"><div class="svc__num">03</div><h3>Beépített gardrób</h3><p>Tökéletes tárolás a legszűkösebb, ferde tetőtéri sarokba is.</p></div>
+      </article>
+      <article class="svc svc--sm reveal" data-d="1">
+        <div class="svc__img"><img src="assets/images/work-feljavitas.jpg" alt="Bútorfelújítás"></div>
+        <div class="svc__body"><div class="svc__num">04</div><h3>Bútorfelújítás</h3><p>Régi, megkopott bútorok újjávarázsolása — ami értékes, az maradjon.</p></div>
+      </article>
+      <article class="svc svc--sm reveal" data-d="2">
+        <div class="svc__img"><img src="assets/images/work-ajtok.jpg" alt="Ajtók beállítása"></div>
+        <div class="svc__body"><div class="svc__num">05</div><h3>Ajtók beállítása</h3><p>Pontos ajtó- és vasalatbeállítás a tökéletes, halk működésért.</p></div>
+      </article>
+      <article class="svc svc--md reveal" data-d="3">
+        <div class="svc__img"><img src="assets/images/work-konyha-nappali.jpeg" alt="Konyha, nappali, fürdő berendezése"></div>
+        <div class="svc__body"><div class="svc__num">06</div><h3>Konyha, nappali, fürdő</h3><p>Komplex, összehangolt otthoni berendezés egyetlen kézből.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ GALLERY ============================ -->
+<section class="gallery" id="galeria" data-screen-label="Galéria">
+  <div class="wrap">
+    <div class="gallery__head">
+      <div class="section-head reveal">
+        <span class="eyebrow">Munkáim</span>
+        <h2 class="display">Az elkészült <em>darabok.</em></h2>
+      </div>
+      <p class="reveal" data-d="1" style="color:var(--ink-soft);max-width:34ch;align-self:flex-end">Kattintson bármelyik képre a nagyításhoz — a nyilakkal lapozhat.</p>
+    </div>
+
+    <div class="masonry reveal">
+      <div class="tile"><img src="assets/images/hero-main.jpeg" alt="Kétszínű konyha réz fogantyúkkal" loading="lazy"><span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-4.3-4.3"/><circle cx="11" cy="11" r="8"/><path d="M11 8v6M8 11h6"/></svg></span></div>
+      <div class="tile"><img src="assets/images/work-konyha-nappali.jpeg" alt="Fehér konyha fa hátfallal" loading="lazy"><span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-4.3-4.3"/><circle cx="11" cy="11" r="8"/><path d="M11 8v6M8 11h6"/></svg></span></div>
+      <div class="tile"><img src="assets/images/g-160114.jpg" alt="Megmunkálás közben — fúrás" loading="lazy"><span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-4.3-4.3"/><circle cx="11" cy="11" r="8"/><path d="M11 8v6M8 11h6"/></svg></span></div>
+      <div class="tile"><img src="assets/images/work-gardrob.jpeg" alt="Beépített tetőtéri gardrób" loading="lazy"><span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-4.3-4.3"/><circle cx="11" cy="11" r="8"/><path d="M11 8v6M8 11h6"/></svg></span></div>
+      <div class="tile"><img src="assets/images/m-29A3.jpeg" alt="Szajkó Róbert a műhelyben" loading="lazy"><span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-4.3-4.3"/><circle cx="11" cy="11" r="8"/><path d="M11 8v6M8 11h6"/></svg></span></div>
+      <div class="tile"><img src="assets/images/work-egyedi-butor.jpeg" alt="Egyedi bútor" loading="lazy"><span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-4.3-4.3"/><circle cx="11" cy="11" r="8"/><path d="M11 8v6M8 11h6"/></svg></span></div>
+      <div class="tile"><img src="assets/images/g-162622.jpg" alt="Elkészült bútor részlet" loading="lazy"><span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-4.3-4.3"/><circle cx="11" cy="11" r="8"/><path d="M11 8v6M8 11h6"/></svg></span></div>
+      <div class="tile"><img src="assets/images/g-171713.jpg" alt="Bútor részlet" loading="lazy"><span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-4.3-4.3"/><circle cx="11" cy="11" r="8"/><path d="M11 8v6M8 11h6"/></svg></span></div>
+      <div class="tile"><img src="assets/images/work-konyha.jpeg" alt="Konyha lépcső alatt" loading="lazy"><span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-4.3-4.3"/><circle cx="11" cy="11" r="8"/><path d="M11 8v6M8 11h6"/></svg></span></div>
+      <div class="tile"><img src="assets/images/g-155232.png" alt="Bútor részlet" loading="lazy"><span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-4.3-4.3"/><circle cx="11" cy="11" r="8"/><path d="M11 8v6M8 11h6"/></svg></span></div>
+      <div class="tile"><img src="assets/images/g-160145.jpg" alt="Bútor részlet" loading="lazy"><span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-4.3-4.3"/><circle cx="11" cy="11" r="8"/><path d="M11 8v6M8 11h6"/></svg></span></div>
+      <div class="tile"><img src="assets/images/work-feljavitas.jpg" alt="Felújított bútor" loading="lazy"><span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 21l-4.3-4.3"/><circle cx="11" cy="11" r="8"/><path d="M11 8v6M8 11h6"/></svg></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="about" id="rolam" data-screen-label="Rólam">
+  <div class="wrap about__grid">
+    <div class="about__media reveal">
+      <div class="portrait"><img src="assets/images/portrait-robert.jpg" alt="Szajkó Róbert asztalosmester"></div>
+      <div class="detail"><img src="assets/images/g-160114.jpg" alt="Precíz megmunkálás közelről"></div>
+    </div>
+    <div class="about__copy">
+      <span class="eyebrow reveal">Rólam</span>
+      <h2 class="reveal" data-d="1">Szajkó <em>Róbert</em></h2>
+      <p class="body reveal" data-d="2">30 éves szakmai tapasztalattal rendelkezem. A korral lépést tartva, technikailag és esztétikailag is folyamatosan megújulva dolgozom — mert szeretem és élvezem a munkámat. Boldogsággal tölt el a megrendelő elégedettsége, ezért a tökéletes eredmény érdekében maximális minőségre és pontosságra törekszem.</p>
+      <div class="about__values reveal" data-d="3">
+        <span class="v">Precizitás</span>
+        <span class="v">Pontos határidő</span>
+        <span class="v">Minőségi alapanyag</span>
+        <span class="v">Korrekt ár</span>
+      </div>
+      <div class="about__sign reveal" data-d="4">
+        <span class="name">Szajkó Róbert</span>
+        <span class="role">Asztalosmester<br>Budapest, 18. kerület</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ OFFER ============================ -->
+<section class="offer on-dark" data-screen-label="Ingyenes felmérés">
+  <div class="wrap">
+    <div class="offer__panel reveal">
+      <div class="offer__top">
+        <div>
+          <span class="eyebrow">Az első lépés ingyenes</span>
+          <h2>Kimegyek, felmérek,<br><em>tanácsot adok.</em></h2>
         </div>
-        
-        <section class="offer-section">
-            <div class="offer-container float-fade-in-left">
-                <h2>Ingyenes felmérés 30 km belül</h2>
-                <p>30 km-es körzetben ingyenes helyszíni felmérést biztosítok. Tapasztalt szakértelemmel precízen mérem fel az igényeit.</p>
-                <h2>Színkatalógusos felmérés</h2>
-                <p>Az első ingyenes felmérés alkalmával elhozom a színkatalógusomat is, hogy minden részlet tökéletes legyen.</p>
-            </div>
-        </section>
-        
-        <section class="contact-section" id="contact-section">
-            <div class="contact-container two-column">
-                <!-- First Column -->
-                <div class="contact-info">
-                    <!-- Call Button -->
-                    <button class="phone-button" onclick="window.location.href='tel:+36209844113'">
-                        Hívj fel!
-                    </button>
-            
-                    <!-- Phone Number -->
-                    <div class="phone-number">
-                        +36 20 984 4113
-                    </div>
-            
-                    <!-- Contact Hours -->
-                    <div class="contact-hours">
-                        <p>Hétköznap 8:00 - 18:00</p>
-                        <p>Hétvégén 9:00 - 14:00</p>
-                    </div>
-            
-                    <!-- Social Icons -->
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/robi.szajko.3" target="_blank">
-                            <img src="icons/facebook.png" alt="Facebook" class="social-icon">
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank">
-                            <img src="icons/instagram.png" alt="Instagram" class="social-icon">
-                        </a>
-                    </div>
-                </div>
-                <!-- Second Column -->
-                <div class="contact-map">
-                    <iframe src="https://maps.google.com/maps?q=Budapest%2018.%20ker%C3%BClet&t=&z=10&ie=UTF8&iwloc=&output=embed"
-                        width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy">
-                    </iframe>
-                </div>
-            </div>
-        </section>
-        
-        
-        <footer class="footer-section">
-            <div class="footer-container">
-                <div class="footer-column">
-                    <h4>Céginformációk</h4>
-                    <p><strong>Szajkó Róbert</strong>, több mint 30 éves tapasztalattal az asztalosiparban, egyedi bútorokat és belsőépítészeti megoldásokat kínál az Ön otthonába.</p>
-                </div>
-                <div class="footer-column">
-                    <h4>Szolgáltatási terület</h4>
-                    <p>Budapesten és környékén, beleértve a 18. kerületet, ingyenes helyszíni felmérés és szaktanácsadás.</p>
-                </div>
-                <div class="footer-column">
-                    <h4>GDPR és Jogi információk</h4>
-                    <p><a href="#">Adatvédelmi irányelvek</a>: Adatvédelmi nyilatkozatunkat itt olvashatja.</p>
-                    <p><a href="#">Felhasználási feltételek</a>: Honlapunk használatával Ön elfogadja a feltételeinket.</p>
-                </div>
-                <div class="footer-column">
-                    <h4>Elérhetőségi idő</h4>
-                    <p>Hétfőtől péntekig: 9:00 - 18:00, Hétvégén: 9:00 - 14:00</p>
-                </div>
-                <div class="footer-bottom">
-                    <p>A weboldalt készítette: Csomós Ádám. Minden jog és tartalom © 2024 Szajkó Róbert - Minden jog fenntartva.</p>
-                </div>
-            </div>
-        </footer>
-                         
-    </main>
-    <script src="js/script.js"></script>
+        <p style="color:var(--on-dark-soft);font-size:1.08rem">Nem kell semmit előre eldöntenie. Egyeztetünk egy időpontot, én pedig mindent a helyszínen átbeszélek Önnel.</p>
+      </div>
+
+      <div class="offer__cards">
+        <div class="offer-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3>Ingyenes felmérés 30 km-en belül</h3>
+          <p>30 km-es körzetben ingyenes helyszíni felmérést biztosítok. Tapasztalt szakértelemmel, precízen mérem fel az igényeit.</p>
+        </div>
+        <div class="offer-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h6l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z"/><circle cx="9" cy="13" r="2"/><path d="M14 11h4M14 15h3"/></svg></div>
+          <h3>Helyszíni színkatalógus</h3>
+          <p>Az első, ingyenes felmérésre elhozom a teljes színkatalógusomat is, hogy minden részlet a helyszínen, együtt dőljön el.</p>
+        </div>
+      </div>
+
+      <div class="offer__foot">
+        <a class="btn btn--accent btn--lg" href="#kapcsolat">Időpontot kérek <span class="ar" aria-hidden="true">↗</span></a>
+        <div class="km">Óriási <span>színválaszték</span> · gyors kivitelezés</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="contact" id="kapcsolat" data-screen-label="Kapcsolat">
+  <div class="wrap contact__grid">
+    <div class="contact__info reveal">
+      <span class="eyebrow">Lépjünk kapcsolatba</span>
+      <h2>Beszéljük meg<br>a következő bútorát.</h2>
+      <a class="contact__phone" href="tel:+36209844113">+36 20 984 4113</a>
+      <div class="contact__hours">
+        <div class="row"><span>Hétköznap</span><span>8:00 – 18:00</span></div>
+        <div class="row"><span>Hétvégén</span><span>9:00 – 14:00</span></div>
+      </div>
+      <div class="contact__actions">
+        <a class="btn btn--accent" href="tel:+36209844113"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>Hívjon fel!</a>
+        <div class="contact__socials">
+          <a href="https://www.facebook.com/robi.szajko.3" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg></a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="contact__map reveal" data-d="1">
+      <iframe src="https://maps.google.com/maps?q=Budapest%2018.%20ker%C3%BClet&t=&z=11&ie=UTF8&iwloc=&output=embed" title="Budapest 18. kerület — szolgáltatási terület" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer" data-screen-label="Lábléc">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__col">
+        <div class="footer__brand"><span class="nav__mark">R</span><span class="t">Asztalos Robi</span></div>
+        <p><strong style="color:var(--on-dark)">Szajkó Róbert</strong> — több mint 30 éves tapasztalattal az asztalosiparban, egyedi bútorokat és belsőépítészeti megoldásokat készít az Ön otthonába.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Szolgáltatási terület</h4>
+        <p>Budapest és környéke, beleértve a 18. kerületet. Ingyenes helyszíni felmérés és szaktanácsadás 30 km-en belül.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Elérhetőség</h4>
+        <a href="tel:+36209844113">+36 20 984 4113</a>
+        <p>Hétköznap 8:00–18:00<br>Hétvégén 9:00–14:00</p>
+      </div>
+      <div class="footer__col">
+        <h4>Jogi információk</h4>
+        <a href="#">Adatvédelmi irányelvek</a>
+        <a href="#">Felhasználási feltételek</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2024 Szajkó Róbert — Minden jog fenntartva.</span>
+      <span>Weboldal: Csomós Ádám · Újratervezve 2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================ LIGHTBOX ============================ -->
+<div class="lb" role="dialog" aria-modal="true" aria-label="Galéria nagyítás">
+  <button class="lb__btn lb__close" aria-label="Bezárás"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <button class="lb__btn lb__prev" aria-label="Előző"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+  <img class="lb__img" src="" alt="Nagyított kép">
+  <button class="lb__btn lb__next" aria-label="Következő"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+  <div class="lb__count"></div>
+</div>
+
+<script src="js/site.js"></script>
 </body>
 </html>
