@@ -49,9 +49,9 @@
       e.setAttribute("ry", (r * rnd(0.9, 0.96)).toFixed(1));
       e.setAttribute("transform", `rotate(${rnd(-10, 10).toFixed(1)} ${cx} ${cy})`);
       e.setAttribute("fill", "none");
-      e.setAttribute("stroke", "#e7c79c");
+      e.setAttribute("stroke", "#9c6a38");
       e.setAttribute("stroke-width", late ? rnd(2.4, 3.6).toFixed(1) : rnd(0.8, 1.6).toFixed(1));
-      e.setAttribute("stroke-opacity", (late ? rnd(0.16, 0.24) : rnd(0.06, 0.13)).toFixed(3));
+      e.setAttribute("stroke-opacity", (late ? rnd(0.18, 0.28) : rnd(0.07, 0.14)).toFixed(3));
       g.appendChild(e);
       r += late ? rnd(26, 40) : rnd(13, 24);
       i++;
@@ -61,8 +61,8 @@
       const ln = document.createElementNS(NS, "line");
       ln.setAttribute("x1", cx + Math.cos(a) * 40); ln.setAttribute("y1", cy + Math.sin(a) * 40);
       ln.setAttribute("x2", cx + Math.cos(a) * len); ln.setAttribute("y2", cy + Math.sin(a) * len);
-      ln.setAttribute("stroke", "#1a140d"); ln.setAttribute("stroke-width", rnd(1.5, 3).toFixed(1));
-      ln.setAttribute("stroke-opacity", rnd(0.18, 0.32).toFixed(2));
+      ln.setAttribute("stroke", "#6b4a28"); ln.setAttribute("stroke-width", rnd(1.5, 3).toFixed(1));
+      ln.setAttribute("stroke-opacity", rnd(0.1, 0.18).toFixed(2));
       g.appendChild(ln);
     }
   })();

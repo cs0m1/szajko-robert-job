@@ -163,6 +163,12 @@ em, .serif {
 .nav__burger span:nth-child(1){ top: 17px; } .nav__burger span:nth-child(2){ bottom: 17px; }
 body.menu-open .nav__burger span:nth-child(1){ top: 22px; transform: rotate(45deg); }
 body.menu-open .nav__burger span:nth-child(2){ bottom: 22px; transform: rotate(-45deg); }
+/* Drawer is dark: when open over an unscrolled (transparent) nav, lighten the brand + burger so they stay visible */
+body.menu-open .nav:not(.scrolled) .nav__brand { color: var(--on-dark); }
+body.menu-open .nav:not(.scrolled) .nav__mark { background: rgba(255,255,255,.13); color: #fff; }
+body.menu-open .nav:not(.scrolled) .nav__brand small { color: var(--on-dark-soft); }
+body.menu-open .nav:not(.scrolled) .nav__burger { border-color: rgba(255,255,255,.28); }
+body.menu-open .nav:not(.scrolled) .nav__burger span { background: var(--on-dark); }
 
 /* Mobile drawer */
 .drawer {
@@ -427,31 +433,31 @@ body.menu-open .drawer a { opacity: 1; transform: none; transition-delay: calc(.
   flex-direction: column;
   isolation: isolate;
   overflow: hidden;
-  color: #fff;
-  background: var(--espresso);
+  color: var(--ink);
+  background: var(--paper);
 }
 .mhero__bg {
   position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
-  background: radial-gradient(130% 100% at 62% 28%, #4c3b23 0%, #3a2d1c 50%, #271d12 100%);
+  background: radial-gradient(130% 100% at 62% 28%, #faf6ee 0%, #f3ede2 52%, #e9dfcd 100%);
 }
 .mhero #mrings { position: absolute; left: 50%; top: 50%; width: 170%; height: 170%; transform: translate(-50%,-50%); }
 .mhero .ring-rot { transform-origin: var(--cx) var(--cy); animation: mRingSpin 240s linear infinite; }
 @keyframes mRingSpin { to { transform: rotate(360deg); } }
 .mhero__core {
   position: absolute; left: 62%; top: 28%; width: 260px; height: 260px; margin: -130px 0 0 -130px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(231,199,156,.18), transparent 70%); animation: mBreathe 16s ease-in-out infinite;
+  background: radial-gradient(circle, rgba(169,111,55,.12), transparent 70%); animation: mBreathe 16s ease-in-out infinite;
 }
-@keyframes mBreathe { 0%,100% { opacity:.65; transform:scale(1); } 50% { opacity:.9; transform:scale(1.06); } }
+@keyframes mBreathe { 0%,100% { opacity:.6; transform:scale(1); } 50% { opacity:.85; transform:scale(1.06); } }
 .mhero__grain {
   position: absolute; inset: -20%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9 0.012' numOctaves='2' seed='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 120% 140%; mix-blend-mode: overlay; opacity: .18;
+  background-size: 120% 140%; mix-blend-mode: multiply; opacity: .05;
 }
-.mhero__vign { position: absolute; inset: 0; background: radial-gradient(120% 80% at 50% 18%, transparent 45%, rgba(15,11,6,.4) 100%); }
-/* Fade the bottom into --espresso so it flows seamlessly into the next (Stats) section */
+.mhero__vign { position: absolute; inset: 0; background: radial-gradient(120% 85% at 50% 16%, transparent 55%, rgba(122,90,50,.12) 100%); }
+/* Soft paper scrim behind the copy — calms the busy ring lines under the text */
 .mhero::after {
-  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 40%;
-  background: linear-gradient(to bottom, transparent 0%, var(--espresso) 100%);
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 68%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(243,237,226,.45) 38%, rgba(243,237,226,.85) 72%, var(--paper) 100%);
   z-index: 1; pointer-events: none;
 }
 
@@ -463,23 +469,23 @@ body.menu-open .drawer a { opacity: 1; transform: none; transition-delay: calc(.
 .mhero__eyebrow {
   display: inline-flex; align-items: center; gap: .6em;
   font-family: var(--font-body); font-weight: 600; font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
-  color: var(--accent-soft);
+  color: var(--accent-deep);
 }
-.mhero__eyebrow::before { content: ""; width: 22px; height: 1.5px; background: var(--accent-soft); display: inline-block; }
+.mhero__eyebrow::before { content: ""; width: 22px; height: 1.5px; background: var(--accent); display: inline-block; }
 .mhero__title {
   font-family: var(--font-display); font-weight: 700; font-size: clamp(2.9rem,15vw,4rem);
   line-height: .95; letter-spacing: -.035em; margin-top: 16px; text-wrap: balance;
 }
-.mhero__title em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--accent-soft); display: block; letter-spacing: -.01em; }
-.mhero__lead { margin-top: 16px; font-size: 1.06rem; line-height: 1.5; color: rgba(255,255,255,.86); max-width: 32ch; }
+.mhero__title em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--accent-deep); display: block; letter-spacing: -.01em; }
+.mhero__lead { margin-top: 16px; font-size: 1.06rem; line-height: 1.5; color: var(--ink-soft); max-width: 32ch; }
 
 .mhero__trust { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
 .mhero__trust span {
-  display: inline-flex; align-items: center; gap: 7px; font-size: .82rem; color: rgba(255,255,255,.9);
-  background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.15); backdrop-filter: blur(6px);
+  display: inline-flex; align-items: center; gap: 7px; font-size: .82rem; color: var(--ink-soft);
+  background: var(--card); border: 1px solid var(--line);
   padding: 8px 13px; border-radius: 100px;
 }
-.mhero__trust span svg { width: 15px; height: 15px; color: var(--accent-soft); flex: none; }
+.mhero__trust span svg { width: 15px; height: 15px; color: var(--accent); flex: none; }
 
 .mhero__cta { margin-top: 24px; display: flex; flex-direction: column; gap: 11px; }
 .mhero__btn {
@@ -489,16 +495,16 @@ body.menu-open .drawer a { opacity: 1; transform: none; transition-delay: calc(.
 }
 .mhero__btn:active { transform: scale(.975); }
 .mhero__btn--accent { background: var(--accent); color: #fff; }
-.mhero__btn--glass { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.26); color: #fff; backdrop-filter: blur(8px); }
+.mhero__btn--glass { background: transparent; border-color: var(--line); color: var(--ink); }
 .mhero__btn .ar { transition: transform .3s var(--ease); }
 .mhero__btn--accent:active .ar { transform: translate(3px,-3px); }
 
 .mhero__scrollhint {
   display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 18px;
-  color: rgba(255,255,255,.5); font-size: .74rem; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--ink-faint); font-size: .74rem; letter-spacing: .16em; text-transform: uppercase;
 }
-.mhero__scrollhint .ln { width: 26px; height: 1px; background: rgba(255,255,255,.3); position: relative; overflow: hidden; }
-.mhero__scrollhint .ln::after { content: ""; position: absolute; inset: 0; width: 40%; background: var(--accent-soft); animation: mSweep 2.4s var(--ease) infinite; }
+.mhero__scrollhint .ln { width: 26px; height: 1px; background: var(--line); position: relative; overflow: hidden; }
+.mhero__scrollhint .ln::after { content: ""; position: absolute; inset: 0; width: 40%; background: var(--accent); animation: mSweep 2.4s var(--ease) infinite; }
 @keyframes mSweep { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
 
 /* Choreographed entrance — staggered rise on load */
@@ -516,16 +522,10 @@ body.menu-open .drawer a { opacity: 1; transform: none; transition-delay: calc(.
 .mhero__cta       { animation-delay: .46s; }
 .mhero__scrollhint{ animation-delay: .60s; }
 
-/* Swap the heroes + make the nav legible over the dark hero */
+/* Swap the heroes (the light hero keeps the default dark nav) */
 @media (max-width: 720px) {
   .hero { display: none; }
   .mhero { display: flex; }
-
-  .nav:not(.scrolled) .nav__mark { background: rgba(255,255,255,.13); color: #fff; border: 1px solid rgba(255,255,255,.26); }
-  .nav:not(.scrolled) .nav__brand { color: #fff; }
-  .nav:not(.scrolled) .nav__brand small { color: rgba(255,255,255,.6); }
-  .nav:not(.scrolled) .nav__burger { border-color: rgba(255,255,255,.28); }
-  .nav:not(.scrolled) .nav__burger span { background: #fff; }
 }
 
 @media (prefers-reduced-motion: reduce) {
