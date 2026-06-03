@@ -30,6 +30,43 @@
   /* ---- Hero intro ---- */
   requestAnimationFrame(() => $(".hero")?.classList.add("in"));
 
+  /* ---- Mobile hero: generate tree rings ---- */
+  (function buildRings() {
+    const NS = "http://www.w3.org/2000/svg";
+    const g = document.getElementById("mRingGroup");
+    const svg = document.getElementById("mrings");
+    if (!g || !svg) return;
+    const cx = 496, cy = 224;
+    svg.style.setProperty("--cx", cx + "px");
+    svg.style.setProperty("--cy", cy + "px");
+    const rnd = (a, b) => a + Math.random() * (b - a);
+    let r = 10, i = 0;
+    while (r < 860) {
+      const late = (i % 5 === 4);
+      const e = document.createElementNS(NS, "ellipse");
+      e.setAttribute("cx", cx); e.setAttribute("cy", cy);
+      e.setAttribute("rx", (r * rnd(0.97, 1.03)).toFixed(1));
+      e.setAttribute("ry", (r * rnd(0.9, 0.96)).toFixed(1));
+      e.setAttribute("transform", `rotate(${rnd(-10, 10).toFixed(1)} ${cx} ${cy})`);
+      e.setAttribute("fill", "none");
+      e.setAttribute("stroke", "#e7c79c");
+      e.setAttribute("stroke-width", late ? rnd(2.4, 3.6).toFixed(1) : rnd(0.8, 1.6).toFixed(1));
+      e.setAttribute("stroke-opacity", (late ? rnd(0.16, 0.24) : rnd(0.06, 0.13)).toFixed(3));
+      g.appendChild(e);
+      r += late ? rnd(26, 40) : rnd(13, 24);
+      i++;
+    }
+    for (let k = 0; k < 5; k++) {
+      const a = rnd(0, Math.PI * 2), len = rnd(260, 760);
+      const ln = document.createElementNS(NS, "line");
+      ln.setAttribute("x1", cx + Math.cos(a) * 40); ln.setAttribute("y1", cy + Math.sin(a) * 40);
+      ln.setAttribute("x2", cx + Math.cos(a) * len); ln.setAttribute("y2", cy + Math.sin(a) * len);
+      ln.setAttribute("stroke", "#1a140d"); ln.setAttribute("stroke-width", rnd(1.5, 3).toFixed(1));
+      ln.setAttribute("stroke-opacity", rnd(0.18, 0.32).toFixed(2));
+      g.appendChild(ln);
+    }
+  })();
+
   /* ---- Count-up animation ---- */
   const animateNum = (el) => {
     const target = +el.dataset.target;
