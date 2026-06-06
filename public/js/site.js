@@ -126,6 +126,71 @@
     para();
   }
 
+  /* ---- Gallery: balanced masonry + "show more" + even-bottom clip ---- */
+  (function () {
+    const moreBtn = $(".more-btn");
+    const grid = $("#galeria-racs");
+    if (!moreBtn || !grid) return;
+    const label = $(".more-btn__txt", moreBtn);
+    const allTiles = $$(".tile", grid);                 // every tile, in display order
+    const DEFAULT = allTiles.filter((t) => !t.classList.contains("is-hidden")).length || 9;
+    let open = false;
+
+    const colCount = () => (window.innerWidth <= 1020 ? 2 : 3);
+    const imgOf = (t) => $("img", t);
+    const shownLoaded = (tiles) => tiles.every((t) => { const i = imgOf(t); return !i || (i.complete && i.naturalHeight > 0); });
+
+    /* Greedy balanced layout: drop each tile into the currently SHORTEST column,
+       so the columns end nearly even. Collapsed, clip + fade the bottom to the
+       shortest column so it reads as one clean line instead of a ragged edge. */
+    const layout = () => {
+      const n = colCount();
+      const shown = open ? allTiles : allTiles.slice(0, DEFAULT);
+      const extra = open ? [] : allTiles.slice(DEFAULT);
+
+      grid.style.maxHeight = "";
+      grid.classList.remove("is-clipped");
+      grid.textContent = "";                            // detach tiles (refs kept in allTiles)
+
+      const cols = [];
+      for (let i = 0; i < n; i++) {
+        const c = document.createElement("div");
+        c.className = "masonry__col";
+        grid.appendChild(c);
+        cols.push(c);
+      }
+      const shortest = () => {
+        let m = 0;
+        for (let i = 1; i < n; i++) if (cols[i].offsetHeight < cols[m].offsetHeight) m = i;
+        return cols[m];
+      };
+      shown.forEach((t) => { t.classList.remove("is-hidden"); shortest().appendChild(t); });
+      extra.forEach((t, i) => { t.classList.add("is-hidden"); cols[i % n].appendChild(t); });
+
+      if (!open && n >= 2 && shownLoaded(shown)) {
+        const min = Math.min(...cols.map((c) => c.offsetHeight));
+        grid.style.maxHeight = Math.round(min) + "px";
+        grid.classList.add("is-clipped");
+      }
+    };
+
+    moreBtn.addEventListener("click", () => {
+      open = !open;
+      moreBtn.setAttribute("aria-expanded", String(open));
+      label.textContent = open ? "Kevesebb" : "Több munka";
+      layout();
+      if (!open) $("#galeria")?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    });
+
+    /* (re)layout when things change: images loading in, fonts, viewport */
+    let raf;
+    const relayout = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(layout); };
+    allTiles.forEach((t) => { const img = imgOf(t); if (img && !img.complete) img.addEventListener("load", relayout); });
+    window.addEventListener("load", relayout);
+    let rz; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(layout, 150); }, { passive: true });
+    layout();
+  })();
+
   /* ---- Lightbox ---- */
   const tiles = $$(".masonry .tile");
   const lb = $(".lb");
